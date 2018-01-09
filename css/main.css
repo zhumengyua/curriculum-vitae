@@ -242,14 +242,16 @@ body>main .downloadResume:hover {
     margin-top: 10px;
 }
 
-section.skills {
+section.skills,
+section.portfolio {
     max-width: 940px;
     margin-left: auto;
     margin-right: auto;
     margin-top: 60px;
 }
 
-section.skills>h2 {
+section.skills>h2,
+section.portfolio>h2 {
     margin-bottom: 30px;
     text-align: center;
     line-height: 1.2;
@@ -287,4 +289,55 @@ section.skills .Progress {
     height: 100%;
     width: 30%;
     border-radius: 2px;
+}
+
+section.portfolio {
+    text-align: center;
+}
+
+section.portfolio>nav {
+    text-align: center;
+    display: inline-block;
+    vertical-align: top;
+}
+
+section.portfolio>nav>ol {
+    margin: 0 auto;
+    display: inline-block;
+    vertical-align: top;
+}
+
+section.portfolio>nav>ol>li {
+    float: left;
+    margin-left: 40px;
+}
+
+section.portfolio>nav>ol>li:first-child {
+    margin-left: 0px;
+}
+
+section.portfolio>nav .bar {
+    height: 5px;
+    margin-top: 5px;
+    background-color: white;
+    border-radius: 2px;
+}
+
+section.portfolio>nav .bar-inner {
+    height: 100%;
+    background-color: #E8676B;
+    border-radius: 2px;
+}
+
+section.portfolio>nav .bar.state-1 .bar-inner {
+    margin-left: 0;
+    width: 50px;
+}
+section.portfolio>nav .bar.state-2 .bar-inner {
+    margin-left: 50px;
+    width: 50px;
+}
+section.portfolio>nav .bar.state-3 .bar-inner {
+    margin-left: 0;
+    width: 50px;
 }
