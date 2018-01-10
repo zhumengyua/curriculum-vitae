@@ -345,11 +345,13 @@ section.portfolio>nav .bar.state-3 .bar-inner {
     width: 84px;
 }
 
-section.portfolio .work {
+section.portfolio .works {
     position: relative;
+    border: 1px solid red;
+    height: 597px;
 }
 
-section.portfolio .work>.big,
+section.portfolio .works>.big,
 section.portfolio>.small {
     position: absolute;
 }
