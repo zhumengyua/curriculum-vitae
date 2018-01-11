@@ -347,11 +347,10 @@ section.portfolio>nav .bar.state-3 .bar-inner {
 
 section.portfolio .works {
     position: relative;
-    border: 1px solid red;
-    height: 597px;
+    margin-top: 40px;
 }
 
 section.portfolio .works>.big,
-section.portfolio>.small {
+section.portfolio .works>.small {
     position: absolute;
 }
