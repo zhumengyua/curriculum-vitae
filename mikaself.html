@@ -7,7 +7,6 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" type="text/css" href="css/loading.css" />
     <link rel="stylesheet" type="text/css" href="css/main.css" />
-
     <script src="//at.alicdn.com/t/font_525346_j86itfmkoqbsm7vi.js"></script>
     <title>米卡的小简历~</title>
     <style type="text/css">
@@ -35,7 +34,6 @@
         .site-welcome.active {
             display: flex;
         }
-        
     </style>
 </head>
 
@@ -44,7 +42,7 @@
         <div class="loading"></div>
     </div>
 
-    <div class="top-Nav-Bar">
+    <div id="topNavbar" class="top-Nav-Bar">
         <div class="top-Nav-Bar-inner clearfix ">
             <a href="#" class="logo" alt="logo">
                 <span class="rs">RS</span>
@@ -213,7 +211,20 @@
         </div>
     </section>
     <script>
-        siteWelcome.classList.remove('active')</script>
+        setTimeout(function () {
+            siteWelcome.classList.remove('active')
+        }, 1000);
+        //添加延迟
+        //获取滚动的y数值
+        window.onscroll = function (xxx) {
+            if (window.scrollY > 0) {
+                topNavbar.classList.add('sticky')
+            }
+            else
+                topNavbar.classList.remove('sticky')
+        }
+    </script>
+
 </body>
 <script>
     portfolioAll.onclick = function () {

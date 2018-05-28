@@ -1,356 +1,363 @@
 .clearfix::after {
-    content: '';
-    display: block;
-    clear: both;
+  content: "";
+  display: block;
+  clear: both;
 }
 
 * {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-    font-family: "Microsoft YaHei" ! important;
-    margin: 0;
-    background: #efefef;
+  font-family: "Microsoft YaHei" !important;
+  margin: 0;
+  background: #efefef;
 }
 
 a {
-    text-decoration: none;
-    color: inherit;
+  text-decoration: none;
+  color: inherit;
 }
 
 hr {
-    height: 0;
-    border: none;
-    border-top: 1px solid #dedede;
+  height: 0;
+  border: none;
+  border-top: 1px solid #dedede;
 }
 
 ul,
 ol {
-    list-style: none;
+  list-style: none;
 }
 
 h1,
 h2,
 h3,
 h4 {
-    font-weight: normal;
+  font-weight: normal;
 }
 
 .top-Nav-Bar {
-    padding: 20px 0 12px 0;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
+  padding: 20px 0 12px 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  transition: all 0.5s;
+  color: #b7b7b7;
 }
 
 .top-Nav-Bar-inner {
-    padding: 0 16px;
+  padding: 0 16px;
 }
 
-.top-Nav-Bar nav>ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
+.top-Nav-Bar nav > ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
-.top-Nav-Bar nav>ul>li {
-    float: left;
-    margin-left: 17px;
+.top-Nav-Bar nav > ul > li {
+  float: left;
+  margin-left: 17px;
 }
 
-.top-Nav-Bar nav>ul>li>a {
-    font-size: 13px;
-    color: #b7b7b7;
-    font-weight: bold;
-    border-bottom: 3px red transparent;
-    border-top: 3px red transparent;
-    padding-top: 10px;
-    padding-bottom: 3px;
+.top-Nav-Bar nav > ul > li > a {
+  font-size: 13px;
+  color: inherit;
+  font-weight: bold;
+  border-bottom: 3px red transparent;
+  border-top: 3px red transparent;
+  padding-top: 10px;
+  padding-bottom: 3px;
 }
 
 .top-Nav-Bar a {
-    float: left;
+  float: left;
 }
 
 .top-Nav-Bar nav {
-    float: right;
-    padding-top: 5px;
-    padding-bottom: 2px;
+  float: right;
+  padding-bottom: 2px;
 }
 
-.top-Nav-Bar nav>ul>li>a:hover {
-    border-bottom: 3px #e05657 solid;
+.top-Nav-Bar nav > ul > li > a:hover {
+  border-bottom: 3px #e05657 solid;
 }
 
 .top-Nav-Bar .logo {
-    font-size: 30px;
-    font-family: "Calibri";
-    font-weight: bold;
+  font-size: 30px;
+  font-family: "Calibri";
+  font-weight: bold;
 }
 
 .top-Nav-Bar .logo .rs {
-    margin-right: 4px;
-    color: #e05657;
+  margin-right: 4px;
+  color: #e05657;
 }
-
+.top-Nav-Bar.sticky {
+  background-color: white;
+  padding: 10px 0;
+  color: #333333;
+  z-index: 1;
+  box-shadow: 0 0 10px 5px rgba(168, 155, 168, 0.5);
+}
 .card {
-    color: #b7b7b7;
+  color: #b7b7b7;
 }
 
 .banner {
-    background-image: url(../img/banner.jpg);
-    height: 515px;
-    background-position: center center;
-    background-size: cover;
+  background-image: url(../img/banner.jpg);
+  height: 515px;
+  background-position: center center;
+  background-size: cover;
 }
 
 .banner .mask {
-    height: 515px;
-    background-color: rgba(110, 109, 109, 0.3);
+  height: 515px;
+  background-color: rgba(110, 109, 109, 0.3);
 }
 
 .userCard {
-    max-width: 930px;
-    margin: auto;
-    background-color: #ffffff;
-    margin-top: -340px;
-    box-shadow: 0px 4px 13px 0px rgba(168, 155, 168, 0.5);
+  max-width: 930px;
+  margin: auto;
+  background-color: #ffffff;
+  margin-top: -340px;
+  box-shadow: 0px 4px 13px 0px rgba(168, 155, 168, 0.5);
 }
 
 .userCard .welcome {
-    background: #e6686a;
-    color: white;
-    display: inline-block;
-    padding: 4px 16px;
-    line-height: 24px;
-    position: relative;
-    margin-bottom: 10px;
+  background: #e6686a;
+  color: white;
+  display: inline-block;
+  padding: 4px 16px;
+  line-height: 24px;
+  position: relative;
+  margin-bottom: 10px;
 }
 
 .userCard .welcome .triangle {
-    display: block;
-    border: 10px solid transparent;
-    width: 0px;
-    border-left-color: #e6686a;
-    ;
-    border-top-width: 0px;
-    position: absolute;
-    top: 100%;
-    left: 4px;
+  display: block;
+  border: 10px solid transparent;
+  width: 0px;
+  border-left-color: #e6686a;
+  border-top-width: 0px;
+  position: absolute;
+  top: 100%;
+  left: 4px;
 }
 
 .userCard .picture {
-    float: left;
+  float: left;
 }
 
 .userCard .text {
-    float: left;
-    margin-left: 65px;
-    width: 440px;
+  float: left;
+  margin-left: 65px;
+  width: 440px;
 }
 
 .userCard .text h1 {
-    margin-top: 28px;
+  margin-top: 28px;
 }
 
 .userCard .text p {
-    margin-top: 10px;
+  margin-top: 10px;
 }
 
 .pictureAndText {
-    padding: 58px;
+  padding: 58px;
 }
 
 .userCard .text hr {
-    margin: 20px 0;
+  margin: 20px 0;
 }
 
 .userCard .text dl dt,
 .userCard .text dl dd {
-    float: left;
-    margin: 7px 0;
+  float: left;
+  margin: 7px 0;
 }
 
 .userCard dl dt {
-    width: 30%;
-    font-size: 14px;
-    font-weight: bold;
-    color: #333333;
+  width: 30%;
+  font-size: 14px;
+  font-weight: bold;
+  color: #333333;
 }
 
 .userCard dl dd {
-    width: 70%;
-    color: #9da0a7;
-    font-size: 15px;
+  width: 70%;
+  color: #9da0a7;
+  font-size: 15px;
 }
 
-.userCard>footer.media {
-    background-color: #e8676b;
-    text-align: center;
+.userCard > footer.media {
+  background-color: #e8676b;
+  text-align: center;
 }
 
 .userCard svg {
-    width: 30px;
-    height: 30px;
-    fill: wheat;
-    vertical-align: top;
+  width: 30px;
+  height: 30px;
+  fill: wheat;
+  vertical-align: top;
 }
 
-.userCard>footer.media>a {
-    display: inline-block;
-    border-radius: 50%;
-    width: 40px;
-    padding: 5px 0;
-    line-height: 30px;
-    margin: 16px;
+.userCard > footer.media > a {
+  display: inline-block;
+  border-radius: 50%;
+  width: 40px;
+  padding: 5px 0;
+  line-height: 30px;
+  margin: 16px;
 }
 
-.userCard>footer.media>a:hover {
-    background: #cf505f;
+.userCard > footer.media > a:hover {
+  background: #cf505f;
 }
 
-body>main .downloadResume {
-    font-size: 16px;
-    line-height: 16px;
-    padding: 21px 55px;
-    display: inline-block;
-    border: 1px solid #D0D0D0;
-    background-color: #EFEFEF;
-    border-radius: 2px;
-    color: #464D59;
-    font-weight: bold;
-    margin: 32px 0;
-    transition: box-shadow 0.3s;
+body > main .downloadResume {
+  font-size: 16px;
+  line-height: 16px;
+  padding: 21px 55px;
+  display: inline-block;
+  border: 1px solid #d0d0d0;
+  background-color: #efefef;
+  border-radius: 2px;
+  color: #464d59;
+  font-weight: bold;
+  margin: 32px 0;
+  transition: box-shadow 0.3s;
 }
 
-body>main .downloadResume-wapper {
-    text-align: center;
+body > main .downloadResume-wapper {
+  text-align: center;
 }
 
-body>main .downloadResume:hover {
-    box-shadow: 0px 4px 13px 0px rgba(168, 155, 168, 0.5);
+body > main .downloadResume:hover {
+  box-shadow: 0px 4px 13px 0px rgba(168, 155, 168, 0.5);
 }
 
 .selfintroduction {
-    max-width: 930px;
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center;
-    margin-top: 10px;
+  max-width: 930px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  margin-top: 10px;
 }
 
 section.skills,
 section.portfolio {
-    max-width: 940px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 60px;
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 60px;
 }
 
-section.skills>h2,
-section.portfolio>h2 {
-    margin-bottom: 30px;
-    text-align: center;
-    line-height: 1.2;
-    font-weight: 600;
+section.skills > h2,
+section.portfolio > h2 {
+  margin-bottom: 30px;
+  text-align: center;
+  line-height: 1.2;
+  font-weight: 600;
 }
 
-section.skills>h3 {}
-
-section.skills>ol {
-    background-color: white;
-    box-shadow: 2px 3px 5px 0px rgba(0, 0, 0, 0.75);
-    padding: 42px 50px 10px;
+section.skills > h3 {
 }
 
-section.skills>ol li {
-    float: left;
-    width: 50%;
-    box-sizing: border-box;
-    padding-right: 40px;
+section.skills > ol {
+  background-color: white;
+  box-shadow: 2px 3px 5px 0px rgba(0, 0, 0, 0.75);
+  padding: 42px 50px 10px;
 }
 
-section.skills>ol li:nth-child(even) {
-    padding-right: 0px;
+section.skills > ol li {
+  float: left;
+  width: 50%;
+  box-sizing: border-box;
+  padding-right: 40px;
+}
+
+section.skills > ol li:nth-child(even) {
+  padding-right: 0px;
 }
 
 section.skills .ProgressBar {
-    height: 5px;
-    background-color: #FAE0E0;
-    border-radius: 2px;
-    margin: 4px 0 40px;
+  height: 5px;
+  background-color: #fae0e0;
+  border-radius: 2px;
+  margin: 4px 0 40px;
 }
 
 section.skills .Progress {
-    background-color: #E8676B;
-    height: 100%;
-    width: 30%;
-    border-radius: 2px;
+  background-color: #e8676b;
+  height: 100%;
+  width: 30%;
+  border-radius: 2px;
 }
 
 section.portfolio {
-    text-align: center;
+  text-align: center;
 }
 
-section.portfolio>nav {
-    text-align: center;
-    display: inline-block;
-    vertical-align: top;
+section.portfolio > nav {
+  text-align: center;
+  display: inline-block;
+  vertical-align: top;
 }
 
-section.portfolio>nav>ol {
-    margin: 0 auto;
-    display: inline-block;
-    vertical-align: top;
+section.portfolio > nav > ol {
+  margin: 0 auto;
+  display: inline-block;
+  vertical-align: top;
 }
 
-section.portfolio>nav>ol>li {
-    float: left;
-    margin-left: 40px;
-    cursor: pointer;
+section.portfolio > nav > ol > li {
+  float: left;
+  margin-left: 40px;
+  cursor: pointer;
 }
 
-section.portfolio>nav>ol>li:first-child {
-    margin-left: 0px;
+section.portfolio > nav > ol > li:first-child {
+  margin-left: 0px;
 }
 
-section.portfolio>nav .bar {
-    height: 5px;
-    margin-top: 5px;
-    background-color: white;
-    border-radius: 2px;
+section.portfolio > nav .bar {
+  height: 5px;
+  margin-top: 5px;
+  background-color: white;
+  border-radius: 2px;
 }
 
-section.portfolio>nav .bar-inner {
-    height: 100%;
-    background-color: #E8676B;
-    border-radius: 2px;
+section.portfolio > nav .bar-inner {
+  height: 100%;
+  background-color: #e8676b;
+  border-radius: 2px;
 }
 
-section.portfolio>nav .bar.state-1 .bar-inner {
-    margin-left: 0;
-    width: 30px;
+section.portfolio > nav .bar.state-1 .bar-inner {
+  margin-left: 0;
+  width: 30px;
 }
 
-section.portfolio>nav .bar.state-2 .bar-inner {
-    margin-left: 70px;
-    width: 40px;
+section.portfolio > nav .bar.state-2 .bar-inner {
+  margin-left: 70px;
+  width: 40px;
 }
 
-section.portfolio>nav .bar.state-3 .bar-inner {
-    margin-left: 145px;
-    width: 84px;
+section.portfolio > nav .bar.state-3 .bar-inner {
+  margin-left: 145px;
+  width: 84px;
 }
 
 section.portfolio .works {
-    position: relative;
-    margin-top: 40px;
+  position: relative;
+  margin-top: 40px;
 }
 
-section.portfolio .works>.big,
-section.portfolio .works>.small {
-    position: absolute;
+section.portfolio .works > .big,
+section.portfolio .works > .small {
+  position: absolute;
 }
