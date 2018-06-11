@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" type="text/css" href="css/loading.css" />
     <link rel="stylesheet" type="text/css" href="css/main.css" />
-    <script src="//at.alicdn.com/t/font_525346_j86itfmkoqbsm7vi.js"></script>
+    <!-- <script src="//at.alicdn.com/t/font_525346_j86itfmkoqbsm7vi.js"></script> -->
     <title>米卡的小简历~</title>
     <style type="text/css">
         .icon {
@@ -54,10 +54,22 @@
                         <a href="#">关于</a>
                     </li>
                     <li>
-                        <a href="#">技能</a>
+                        <a class="menuTigger" href="#">技能</a>
+                        <ul class="submenu">
+                            <li>作品1</li>
+                            <li>作品2</li>
+                            <li>作品3</li>
+                        </ul>
                     </li>
                     <li>
-                        <a href="#">作品</a>
+                        <a class="menuTigger" href="#">作品
+                        </a>
+                        <ul class="submenu">
+                            <li>作品1</li>
+                            <li>作品2</li>
+                            <li>作品3</li>
+                        </ul>
+
                     </li>
                     <li>
                         <a href="#">博客</a>
@@ -235,6 +247,21 @@
     }
     portfolioVallina.onclick = function () {
         portfolioBar.className = "bar state-3"
+    }
+    let atags = document.getElementsByClassName('menuTigger')
+    console.log(atags)
+    for (let i = 0; i < atags.length; i++) {
+        atags[i].onmouseenter = function (x) {
+            let a = x.currentTarget
+            let brother = a.nextSibling//找节点下面的那个class（弟弟）
+            while (brother.nodeType === 3) {//1表示是节点（div、p之类）3表示是文字
+                brother = brother.nextSibling
+            }
+            console.log(brother)
+        }
+        atags[i].onmouseleave = function () {
+            console.log('22')
+        }
     }
 </script>
 

@@ -59,6 +59,7 @@ h4 {
 }
 
 .top-Nav-Bar nav > ul > li {
+  position: relative;
   float: left;
   margin-left: 17px;
 }
@@ -71,6 +72,7 @@ h4 {
   border-top: 3px red transparent;
   padding-top: 10px;
   padding-bottom: 3px;
+  position: relative;
 }
 
 .top-Nav-Bar a {
@@ -82,10 +84,37 @@ h4 {
   padding-bottom: 2px;
 }
 
-.top-Nav-Bar nav > ul > li > a:hover {
-  border-bottom: 3px #e05657 solid;
+.top-Nav-Bar nav > ul > li > a:hover::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background: #e06567;
+  height: 3px;
+  animation: menuSlide 0.4s;
 }
-
+@keyframes menuSlide {
+  0% {
+    width: 0px;
+  }
+  100% {
+    width: 100%;
+  }
+}
+.top-Nav-Bar .submenu {
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 100%;
+}
+.top-Nav-Bar .submenu.active {
+  display: block;
+}
+.top-Nav-Bar .submenu > li {
+  white-space: nowrap; /*不换行*/
+}
 .top-Nav-Bar .logo {
   font-size: 30px;
   font-family: "Calibri";
