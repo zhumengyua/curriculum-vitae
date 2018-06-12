@@ -48,21 +48,21 @@
                 <span class="rs">RS</span>
                 <span class="card">card</span>
             </a>
-            <nav>
-                <ul>
+            <nav class="menu">
+                <ul class="clearfix">
                     <li>
                         <a href="#">关于</a>
                     </li>
                     <li>
-                        <a class="menuTigger" href="#">技能</a>
+                        <a href="#">技能</a>
                         <ul class="submenu">
-                            <li>作品1</li>
-                            <li>作品2</li>
-                            <li>作品3</li>
+                            <li>技能1</li>
+                            <li>技能2</li>
+                            <li>技能3</li>
                         </ul>
                     </li>
                     <li>
-                        <a class="menuTigger" href="#">作品
+                        <a href="#">作品
                         </a>
                         <ul class="submenu">
                             <li>作品1</li>
@@ -248,19 +248,17 @@
     portfolioVallina.onclick = function () {
         portfolioBar.className = "bar state-3"
     }
-    let atags = document.getElementsByClassName('menuTigger')
-    console.log(atags)
-    for (let i = 0; i < atags.length; i++) {
-        atags[i].onmouseenter = function (x) {
-            let a = x.currentTarget
-            let brother = a.nextSibling//找节点下面的那个class（弟弟）
-            while (brother.nodeType === 3) {//1表示是节点（div、p之类）3表示是文字
-                brother = brother.nextSibling
-            }
-            console.log(brother)
+    let litags = document.querySelectorAll('nav.menu>ul>li')
+    for (let i = 0; i < litags.length; i++) {
+        litags[i].onmouseenter = function (x) {
+            x.currentTarget.classList.add('active')//监听哪个元素被触发，并且加上ClassName
+            // let brother = li.getElementsByTagName('ul')[0]//TagName:返回元素的标签名
+            // while (brother.nodeType === 3) {//1表示是节点（div、p之类）3表示是文字
+            //     brother = brother.nextSibling
+            // }          
         }
-        atags[i].onmouseleave = function () {
-            console.log('22')
+        litags[i].onmouseleave = function (x) {
+            x.currentTarget.classList.remove('active')
         }
     }
 </script>

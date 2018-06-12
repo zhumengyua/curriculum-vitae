@@ -84,7 +84,7 @@ h4 {
   padding-bottom: 2px;
 }
 
-.top-Nav-Bar nav > ul > li > a:hover::after {
+.top-Nav-Bar nav > ul > li.active> a::after {
   content: "";
   display: block;
   position: absolute;
@@ -104,16 +104,32 @@ h4 {
   }
 }
 .top-Nav-Bar .submenu {
+  margin-top: 4px;
   display: none;
   position: absolute;
-  left: 0;
+  right: 0;
   top: 100%;
+  background: white;
+  color: #3d4451;
+  cursor: pointer;
+  box-shadow: 0 0 10px 0px rgba(168, 155, 168, 0.5);
 }
-.top-Nav-Bar .submenu.active {
+.top-Nav-Bar li.active > .submenu {
   display: block;
+  animation: submenuSlide 0.5s;
+}
+@keyframes submenuSlide {
+  0% {
+    margin-right: 100%;
+  }
+  100% {
+    margin-right: 0%;
+  }
 }
 .top-Nav-Bar .submenu > li {
   white-space: nowrap; /*不换行*/
+  padding: 10px 5px;
+  font-size: 13px;
 }
 .top-Nav-Bar .logo {
   font-size: 30px;
