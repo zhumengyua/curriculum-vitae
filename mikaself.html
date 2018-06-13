@@ -266,15 +266,12 @@
         aTags[i].onclick = function (x) {
             x.preventDefault()//阻止默认动作（各种跳转等。）
             let a = x.currentTarget//获取用户点击的标签
-            let href = a.getAttribute('href')//获取a标签的href
+            let href = a.getAttribute('href')//获取a标签的href(原文)
             let element = document.querySelector(href)
             let top = element.offsetTop
             window.scrollTo(0, top - 80)
-
-
         }
-
-    } console.log(aTags)
+    }
 </script>
 
 </html>
