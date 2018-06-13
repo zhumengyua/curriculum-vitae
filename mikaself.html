@@ -51,10 +51,10 @@
             <nav class="menu">
                 <ul class="clearfix">
                     <li>
-                        <a href="#">关于</a>
+                        <a href="#siteAbout">关于</a>
                     </li>
                     <li>
-                        <a href="#">技能</a>
+                        <a href="#siteSkills">技能</a>
                         <ul class="submenu">
                             <li>技能1</li>
                             <li>技能2</li>
@@ -62,7 +62,7 @@
                         </ul>
                     </li>
                     <li>
-                        <a href="#">作品
+                        <a href="#siteWorks">作品
                         </a>
                         <ul class="submenu">
                             <li>作品1</li>
@@ -72,19 +72,19 @@
 
                     </li>
                     <li>
-                        <a href="#">博客</a>
+                        <a href="#siteBlog">博客</a>
                     </li>
                     <li>
-                        <a href="#">联系方式</a>
+                        <a href="#siteTel">联系方式</a>
                     </li>
                     <li>
-                        <a href="#">日历</a>
+                        <a href="#siteTime">日历</a>
                     </li>
                     <li>
-                        <a href="#">联系我</a>
+                        <a href="#siteTEll">联系我</a>
                     </li>
                     <li>
-                        <a href="#">其他</a>
+                        <a href="#siteOther">其他</a>
                     </li>
                 </ul>
             </nav>
@@ -261,6 +261,20 @@
             x.currentTarget.classList.remove('active')
         }
     }
+    let aTags = document.querySelectorAll('nav.menu>ul>li>a')//选择标签
+    for (let i = 0; i < aTags.length; i++) {
+        aTags[i].onclick = function (x) {
+            x.preventDefault()//阻止默认动作（各种跳转等。）
+            let a = x.currentTarget//获取用户点击的标签
+            let href = a.getAttribute('href')//获取a标签的href
+            let element = document.querySelector(href)
+            let top = element.offsetTop
+            window.scrollTo(0, top - 80)
+
+
+        }
+
+    } console.log(aTags)
 </script>
 
 </html>
