@@ -72,19 +72,19 @@
 
                     </li>
                     <li>
-                        <a href="#siteBlog">博客</a>
+                        <a href="">博客</a>
                     </li>
                     <li>
-                        <a href="#siteTel">联系方式</a>
+                        <a href="">联系方式</a>
                     </li>
                     <li>
-                        <a href="#siteTime">日历</a>
+                        <a href="">日历</a>
                     </li>
                     <li>
-                        <a href="#siteTEll">联系我</a>
+                        <a href="">联系我</a>
                     </li>
                     <li>
-                        <a href="#siteOther">其他</a>
+                        <a href="">其他</a>
                     </li>
                 </ul>
             </nav>
@@ -94,7 +94,7 @@
         <div class="mask"></div>
     </div>
     <main>
-        <div class="userCard">
+        <div class="userCard" id='siteAbout'>
             <div class="pictureAndText clearfix">
                 <div class="picture">
                     <img src="img/avatar.jpg" width="299" height="347" alt="头像">
@@ -157,7 +157,7 @@
         <p class="selfintroduction">这里写自我介绍自我介绍自我介绍
             <br> 自我介绍 自我介绍自我介绍 </p>
     </main>
-    <section class="skills">
+    <section class="skills" id='siteSkills'>
         <h2>技能</h2>
         <ol class="clearfix">
             <li>
@@ -198,7 +198,7 @@
             </li>
         </ol>
     </section>
-    <section class="portfolio">
+    <section class="portfolio" id='siteWorks'>
         <h2>作品集</h2>
         <nav>
             <ol class="clearfix">
@@ -266,10 +266,10 @@
         aTags[i].onclick = function (x) {
             x.preventDefault()//阻止默认动作（各种跳转等。）
             let a = x.currentTarget//获取用户点击的标签
-            let href = a.getAttribute('href')//获取a标签的href(原文)
+            let href = a.getAttribute('href')//获取a标签的href(原文)如果直接a.href则是带http协议的
             let element = document.querySelector(href)
             let top = element.offsetTop
-            window.scrollTo(0, top - 80)
+            window.scrollTo(0, top - 80)//滑动到哪
         }
     }
 </script>
