@@ -335,15 +335,21 @@ section.skills .ProgressBar {
   background-color: #fae0e0;
   border-radius: 2px;
   margin: 4px 0 40px;
+  overflow: hidden;
 }
 
-section.skills .Progress {
+section.skills .ProgressBar > .Progress {
   background-color: #e8676b;
   height: 100%;
   width: 30%;
   border-radius: 2px;
+  transform: translateX(0);
+  transition: all 1s;
 }
-
+section.skills.offset .Progress {
+  transform: translateX(-100%);
+}
+   
 section.portfolio {
   text-align: center;
 }
@@ -410,4 +416,19 @@ section.portfolio .works > .small {
 }
 [date-x].active {
   outline: 20px solid red;
+}
+[date-x].offset {
+  transform: translateY(100px);
+}
+[date-x] {
+  transform: translateY(0);
+  transition: all 0.5s;
+}
+@keyframes slideUp {
+  0% {
+    transform: translateY(-30px);
+  }
+  100% {
+    transform: translateY(0);
+  }
 }
